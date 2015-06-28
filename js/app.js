@@ -4,11 +4,13 @@ var helloAngularApp = angular.module('helloAngularApp', ['ngRoute',
 helloAngularApp.config(['$routeProvider',
                         function($routeProvider) {
                             $routeProvider.when('/home', {
-                                templateUrl : 'index.html',
+                                templateUrl : 'main.html',
                                 controller : 'MainController'
-                            }).
-                            otherwise({
-                                templateUrl : 'index.html',
+                            }).when('/view', {
+                                templateUrl: 'viewTodos.html',
+                                controller: 'ViewTodosController'
+                            }).otherwise({
+                                templateUrl : 'main.html',
                                 controller : 'MainController'    
                             });                                                
                         }
