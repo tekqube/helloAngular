@@ -1,9 +1,10 @@
 <div>
+    Filter : <input type="text" ng-model="title">    
     <h2>Tasks information</h2>
-    <ul ng-repeat="todo in todos">
+    <ul ng-repeat="todo in todos | filter : title">
         <li>
-            <h4>{{todo.title}}</h4>
-            <p>{{todo.description}}</p>
+            <h4>{{todo.title | uppercase}}</h4>
+            <p>{{todo.description | lowercase}}</p>
         </li>   
     </ul>
 </div>
